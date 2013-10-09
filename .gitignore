@@ -1,0 +1,4 @@
+WIPStats.ncrunchsolution
+*.suo
+packages/
+WIPStats/obj/
