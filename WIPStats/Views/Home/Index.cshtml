@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "WIP Stats";
+}
+<h2>@ViewBag.Title</h2>
+<style>
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid #999; padding: 0.5rem; text-align: left; }
+    .thickBottomBorder { border-bottom: 10px solid #999; }
+</style>
+<h4>Notes</h4>
+<ul>
+    <li>Tabs for each backlog (Feature, Platform, Support at least)</li>
+    <li>x is different for each backlog</li>
+    <li>Top Sprint row is the last completed one; Sprint x is the bottom one</li>
+</ul>
+<h4>Nice to have</h4>
+<ul>
+    <li>Notes can be edited and saved</li>
+    <li>Hover over Sprint name displays list of the names accepted stories<ul>
+        <li>Names link to pivotal</li></ul>
+    </li>
+    <li>Ability to switch to a graph view<ul>
+        <li>My idea: y is count of points or stories; x is time split into sprints, maybe adjustable</li><li>Look
+            at cumulative flow diagram/burn-up chart </li>
+    </ul>
+    </li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Stories</th>
+            <th>Features</th>
+            <th>Points</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Total</td>
+            <td>15</td>
+            <td>12</td>
+            <td>55</td>
+            <td></td>
+        </tr>
+        <tr class="thickBottomBorder">
+            <td>Average</td>
+            <td>15</td>
+            <td>12</td>
+            <td>55</td>
+            <td>From start of Sprint x (when Dan Junior started)</td>
+        </tr>
+        @for (var i = 24; i > 12; i--) {
+            <tr>
+                <td>Sprint @i</td>
+                <td>15</td>
+                <td>12</td>
+                <td>55</td>
+                <td>WIP limited</td>
+            </tr>
+        }
+    </tbody>
+</table>

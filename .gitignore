@@ -2,3 +2,5 @@ WIPStats.ncrunchsolution
 *.suo
 packages/
 WIPStats/obj/
+*.ncrunchsolution.*
+WIPStats/bin/
