@@ -35,7 +35,7 @@
             <td>From start of Sprint x (when Dan Junior started)</td>
         </tr>
         @foreach (var sprint in @Model.Sprints) {
-              <tr>
+            <tr>
                 <td>Sprint @sprint.IterationNumber</td>
                 <td>@sprint.Stories</td>
                 <td>@sprint.Features</td>
@@ -52,7 +52,15 @@
     <li>Top Sprint row is the last completed one; Sprint x is the bottom one</li>
 </ul>
 <ul>
-    <li>Need to only pull out iterations (Sprints) from the one after DJs start date</li>
+    <li>Show tom
+        <ul>
+            <li>Test coverage</li>
+            <li>Story type bug</li>
+            <li>Check limit bug</li>
+            <li>Uncommited files</li>
+        </ul>
+    </li>
+    <li>remove notes</li>
 </ul>
 <h4>Nice to have</h4>
 <ul>
@@ -61,8 +69,8 @@
         <li>Names link to pivotal</li></ul>
     </li>
     <li>Ability to switch to a graph view<ul>
-        <li>My idea: y is count of points or stories; x is time split into sprints, maybe adjustable</li><li>Look
-            at cumulative flow diagram/burn-up chart </li>
+        <li>My idea: y is count of points or stories; x is time split into sprints, maybe adjustable</li><li>
+            Look at cumulative flow diagram/burn-up chart </li>
     </ul>
     </li>
 </ul>
