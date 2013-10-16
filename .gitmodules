@@ -1,0 +1,3 @@
+[submodule "ext/PivotalTracker.NET"]
+	path = ext/PivotalTracker.NET
+	url = https://github.com/palfrey/PivotalTracker.NET.git
