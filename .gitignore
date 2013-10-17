@@ -4,3 +4,4 @@ packages/
 WIPStats/obj/
 *.ncrunchsolution.*
 WIPStats/bin/
+.nuget/PivotalTrackerDotNet/lib/net40/PivotalTrackerDotNet.dll

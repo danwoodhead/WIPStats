@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIPStats", "WIPStats\WIPStats.csproj", "{B820D619-16CA-4986-B3DA-435A001A73F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotalTrackerDotNet", "ext\PivotalTracker.NET\PivotalTrackerDotNet\PivotalTrackerDotNet.csproj", "{579B9125-0944-4C30-A31F-6C70A0DDE1C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B820D619-16CA-4986-B3DA-435A001A73F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B820D619-16CA-4986-B3DA-435A001A73F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B820D619-16CA-4986-B3DA-435A001A73F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
