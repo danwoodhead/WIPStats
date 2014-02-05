@@ -5,3 +5,7 @@ WIPStats/obj/
 *.ncrunchsolution.*
 WIPStats/bin/
 .nuget/PivotalTrackerDotNet/lib/net40/PivotalTrackerDotNet.dll
+WIPStats.Test/bin/
+WIPStats.Test/obj/
+*ncrunchproject
+*crunchsolution*

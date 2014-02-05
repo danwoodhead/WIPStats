@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIPStats", "WIPStats\WIPSta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotalTrackerDotNet", "ext\PivotalTracker.NET\PivotalTrackerDotNet\PivotalTrackerDotNet.csproj", "{579B9125-0944-4C30-A31F-6C70A0DDE1C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIPStats.Test", "WIPStats.Test\WIPStats.Test.csproj", "{18885B82-236D-4938-99EC-0E4BAA6FD3C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{579B9125-0944-4C30-A31F-6C70A0DDE1C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18885B82-236D-4938-99EC-0E4BAA6FD3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18885B82-236D-4938-99EC-0E4BAA6FD3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18885B82-236D-4938-99EC-0E4BAA6FD3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18885B82-236D-4938-99EC-0E4BAA6FD3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

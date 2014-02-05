@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Web;
@@ -15,21 +16,33 @@ namespace WIPStats.Controllers {
         private readonly DateTime juniorStarted; // 
         private readonly StoryService storyService;
 
+        private IEnumerable<Iteration> Iterations;
+        private Project Project;
+
         public HomeController() {
-            authenticationToken = "8c84200774373cdb629213a90491cfce";
+            //TODO into non-checked in text file
+            authenticationToken = ConfigurationManager.AppSettings["pivotalAuthToken"];
             storyService = new StoryService(authenticationToken);
-            juniorStarted = new DateTime(2013, 5, 06);  // actually 13th, but need to hack to allpw for offset
+            juniorStarted = new DateTime(2013, 5, 06);  // actually 13th, but need to hack to allow for offset
+            //TODO cache? is this the best way to do this?
+            Project = GetProject(FEATURE_BACKLOG_ID);
+            Iterations = GetIterationsSinceJuniorJoined(Project.Id);
         }
 
         public ActionResult Index() {
+            return View("Index");
+        }
 
-            var project = GetProject(FEATURE_BACKLOG_ID);
+        public ActionResult FeatureWipStats() {
+            var featureBacklog = new BacklogViewModel(Project, Iterations);
+            return View("FeatureWipStats", featureBacklog);
+        }
 
-            var iterations = GetIterationsSinceJuniorJoined(project.Id);
-
-            var featureBacklog = new BacklogViewModel(project, iterations);
-
-            return View("Index", featureBacklog);
+        public ActionResult CycleTime() {
+            //TODO can i get combined?
+            //TODO need new viewmodel?
+            //TODO input for number of months, new action?
+            return View("Index");
         }
 
         private IEnumerable<Iteration> GetIterationsSinceJuniorJoined(int projectId) {

@@ -9,9 +9,9 @@ namespace WIPStats.Models {
         public int TotalStories { get; set; }
         public int TotalFeatures { get; set; }
         public int TotalPoints { get; set; }
-        public int AverageStories { get; set; }
-        public int AverageFeatures { get; set; }
-        public int AveragePoints { get; set; }
+        public string AverageStories { get; set; }
+        public string AverageFeatures { get; set; }
+        public string AveragePoints { get; set; }
 
         public BacklogViewModel(Project project, IEnumerable<Iteration> iterations) {
             Project = project;
@@ -22,10 +22,14 @@ namespace WIPStats.Models {
             TotalFeatures = Sprints.Sum(sp => sp.Features);
             TotalPoints = Sprints.Sum(sp => sp.Points);
 
-            AverageStories = TotalStories / noOfIterations;
-            AverageFeatures = TotalFeatures / noOfIterations;
-            AveragePoints = TotalPoints / noOfIterations;
+            AverageStories = AverageText(TotalStories, noOfIterations);
+            AverageFeatures = AverageText(TotalFeatures, noOfIterations);
+            AveragePoints = AverageText(TotalPoints, noOfIterations);
 
+        }
+
+        private string AverageText(int numerator, int denominator) {
+            return (numerator / denominator).ToString();
         }
     }
 }
