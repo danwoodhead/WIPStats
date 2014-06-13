@@ -15,10 +15,5 @@ namespace WIPStats.Test {
              //TODO mocking...
            //viewModel = new BacklogViewModel();
         }
-
-        [Test]
-        public void AverageDoesntErrorWithNoIterations() {
-            Assert.Fail("need to write this"); 
-        }
     }
 }
